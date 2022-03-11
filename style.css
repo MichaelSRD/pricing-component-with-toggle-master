@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 1rem;
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+    Font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    background: hsl(240, 78%, 98%);
+    background-image: url(images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-position:  210px top;
+    
+    
+}
+.boton{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    align-items: center;
+}
+.switch{
+    background:linear-gradient(135deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%));
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 4px;
+}
+input{
+    display: none;
+}
+ #btn{
+    appearance: none;
+    outline: none;
+    background: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    transition: .5s;
+}
+#btn:hover{
+    cursor: pointer;
+}
+.card-precio{
+    background: rgb(255, 255, 255);
+    padding: 2rem 4rem;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    
+    color: hsl(233, 13%, 49%);
+}
+.titulo{
+    margin-bottom: 10px;
+}
+.precio{
+    position: relative;
+}
+span{
+    font-size: 30px;
+}
+.anual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding-bottom: 20px;
+    color: hsl(232, 13%, 33%);
+    visibility: visible;
+}
+.mensual{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding-bottom: 20px;
+    position: absolute;
+    top: 0;
+    visibility: collapse;
+    color: hsl(232, 13%, 33%);
+    width: 100%; 
+}
+.contenido{
+    margin-bottom: 1rem;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+    padding-bottom: 20px;
+}
+.leermas{
+    background:linear-gradient(135deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%));
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    margin-top: 2rem;
+}
+.leermas:hover{
+    cursor: pointer;
+}
+.profecional {
+    background:linear-gradient(135deg,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%));
+    color: white;
+}
+.profecional .leermas{
+    background: white;
+    color: hsl(232, 13%, 33%);
+}
+.profecional .anual{
+    color:white;
+}
+.profecional .mensual{
+    color: white;
+}
+
+#toggle:checked  ~ * .mensual {
+    visibility: visible;
+}
+#toggle:checked  ~ * .anual {
+    visibility: collapse;
+}
+#toggle:checked ~ * #btn{
+    transform: translate(25px, 0px);
+    transition: transform .5s;
+}
+.switch:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.leermas:hover{
+    background: none;
+    border: 1px solid hsl(233, 13%, 49%);;
+    color: hsl(232, 13%, 33%);
+}
+.profecional .leermas:hover{
+   color: white;
+   border: 1px solid white;
+}
+
+
+
+
+@media (min-width: 410px) {
+    body{
+        background-position: 263px top;
+    }
+    
+}
+
+@media (min-width: 500px) {
+    body{
+        background-position: 320px top;
+    }
+    
+}
+@media (min-width: 600px) {
+    body{
+        background-position: 420px top;
+    }
+    
+}
+@media (min-width: 700px) {
+    body{
+        background-position: right top;
+    }
+    
+}
+@media (min-width: 880px) {
+    body{
+    padding: 0;
+    }
+    .contenedor {
+        background-image: url(images/bg-bottom.svg);
+        background-repeat: no-repeat;
+        background-position: 0rem bottom;
+        width: 100%;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    .cards{
+        display: flex;
+        position: relative;
+    }
+    .card-precio{
+        
+        
+        padding: 2rem 2rem;
+       
+    }
+    .centro{
+        position: relative;
+    }
+    .profecional {
+        position: relative;
+        top: -21px;
+        padding-top: 3rem;
+        height: 451px;
+    }
+    .three{
+        height: 415px;
+    }
+}
